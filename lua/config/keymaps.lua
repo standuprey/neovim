@@ -9,7 +9,10 @@ vim.keymap.set("i", "<C-e>", "<Esc>$a")
 vim.keymap.set("i", "<C-w>", "<Esc>ea")
 -- Move backward one word in insert mode
 vim.keymap.set("i", "<C-b>", "<Esc>bi")
-
+-- Select all
+vim.keymap.set("n", "<C-q>", "gg0yG")
+-- Select all
+vim.keymap.set("n", "<C-c>", '"0p')
 -- Copy path with F keys
 vim.keymap.set("n", "<F1>", function()
   local filename = vim.fn.expand("%:t")
@@ -66,3 +69,13 @@ vim.keymap.set("n", "<leader>bR", function()
   ui.refresh()
   vim.notify("All buffers unpinned except current", vim.log.levels.INFO)
 end, { noremap = true, silent = true, desc = "Unpin all buffers except current" })
+vim.keymap.set("n", "<leader>ac", "<cmd>ClaudeCode<CR>", { desc = "Toggle Claude Code" })
+vim.keymap.set("n", "<leader>cu", function()
+  vim.lsp.buf.code_action({
+    apply = true,
+    context = {
+      only = { "source.organizeImports" },
+      diagnostics = {},
+    },
+  })
+end, { desc = "Organize imports" })

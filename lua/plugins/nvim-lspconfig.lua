@@ -7,14 +7,19 @@ return {
           typescript = {
             preferences = {
               importModuleSpecifier = "absolute",
-              -- Disable snippet completions
               providePrefixAndSuffixTextForRename = false,
+            },
+            suggest = {
+              completeFunctionCalls = false,
             },
           },
           javascript = {
             preferences = {
               importModuleSpecifier = "absolute",
               providePrefixAndSuffixTextForRename = false,
+            },
+            suggest = {
+              completeFunctionCalls = false,
             },
           },
         },
