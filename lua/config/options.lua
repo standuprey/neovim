@@ -5,3 +5,4 @@ vim.g.lazyvim_prettier_needs_config = true
 
 -- Disable swap files to prevent E325 errors with bufferline
 vim.opt.swapfile = false
+vim.g.snacks_animate = false
