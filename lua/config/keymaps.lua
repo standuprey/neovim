@@ -9,6 +9,8 @@ vim.keymap.set("i", "<C-e>", "<Esc>$a")
 vim.keymap.set("i", "<C-w>", "<Esc>ea")
 -- Move backward one word in insert mode
 vim.keymap.set("i", "<C-b>", "<Esc>bi")
+-- Move backward one char in insert mode
+vim.keymap.set("i", "<C-h>", "<Esc>i")
 -- Select all
 vim.keymap.set("n", "<C-q>", "gg0yG")
 -- Select all
