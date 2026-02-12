@@ -67,8 +67,7 @@ return {
 
       keymap = {
         preset = "default",
-        ["<S-CR>"] = { "select_and_accept" }, -- Shift + Enter
-        ["<CR>"] = { "fallback" },
+        ["<Tab>"] = { "select_and_accept" },
         ["<C-y>"] = { "select_and_accept" },
       },
     },
