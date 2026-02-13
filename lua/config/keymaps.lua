@@ -13,8 +13,10 @@ vim.keymap.set("i", "<C-b>", "<Esc>bi")
 vim.keymap.set("i", "<C-h>", "<Esc>i")
 -- Select all
 vim.keymap.set("n", "<C-q>", "gg0yG")
--- Select all
+-- Paste last yanked
 vim.keymap.set("n", "<C-c>", '"0p')
+-- Set <Leader>p to select all and paste
+vim.keymap.set("n", "<leader>a", "ggVGp", { desc = "Select all and paste" })
 -- Copy path with F keys
 vim.keymap.set("n", "<F1>", function()
   local filename = vim.fn.expand("%:t")
